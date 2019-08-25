@@ -27,6 +27,22 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 	height: 30px;
 }
 
+.huge-text-middle {
+    line-height:3em;
+    display:table;
+}
+
+.huge-text-middle .fas {
+    font-size:2.5em;
+    display:talbe-cell;
+    vertical-align:middle;
+}
+
+.huge-text-middle span {
+    display:talbe-cell;
+    vertical-align:middle;
+}
+
 .top-bar {
     min-height: 40px;
     background-color:#eeeeee;
@@ -45,13 +61,25 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 .top-menu .navbar-brand {
     padding: 0;
-    margin: 30px 0 0 0;
+    margin: 10px 0 0 0;
+}
+
+.subheader .pull-left {
+    padding-left:10px;
+}
+
+.subheader .pull-right {
+    padding-left:10px;
+}
+
+.fab, .fas {
+    font-size:1.2em;
+    color:#e67e22;
 }
 
 /* ------ Carousel ----- */
 
 #carousel {
-    background: url('../images/carousel_bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -98,7 +126,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 @media (max-width: 1024px) {
     #carousel {
-        background: url('../images/carousel_bg_s.jpg') no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -109,25 +136,19 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
     }
 }
 
+.car-item-1, .car-item-2, .car-item-3 {
+    background-position-x:center;
+    max-height:500px;
+}
+.car-item-1 {background: url('../images/bg1.jpg') no-repeat;}
+.car-item-2 {background: url('../images/bg2.jpg') no-repeat;}
+.car-item-3 {background: url('../images/bg3.jpg') no-repeat;}
+
 /* ------ End of Carousel ----- */
 
-/* ------ Welcome & Slogna ------ */
-.welcome {
-    border-bottom: 1px solid #cccccc;
-    min-height: 230px;
-}
-
-.slogan {
-    font-family:  'Open Sans', sans-serif;
-    font-weight: normal;
-    font-size: 42px;
-    margin: 60px 0;
-    color: #333333;
-}
-
 .service {
-    margin-bottom: 100px;
-    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .service-item {
@@ -233,18 +254,18 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 }
 
-.team_hr {
+.comments_hr {
     border: 1px solid #fff; 
     width: 39.5%; 
     float: left;
 }
 
-.team_hr_left {
+.comments_hr_left {
     margin-right: 30px;
     margin-left: 15px; 
 }
 
-.team_hr_right {
+.comments_hr_right {
     margin-left: 30px;
 }
 
@@ -252,30 +273,30 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
     border: 1px solid #cccccc; 
 }
 
-.team {
+.comments {
     background: url('../images/background.png') ; 
     font-family:  'Open Sans', sans-serif;
-    min-height:590px;
+    min-height:340px;
     color:#ffffff;
 
 }
 .line-header {
-    margin-top:100px;
-    margin-bottom:80px;
+    margin-top:50px;
+    margin-bottom:50px;
 }
 
-.member-thumb:hover .thumb-overlay {
+.comment-thumb:hover .thumb-overlay {
     transition: all 0.3s ease-in-out 0s;
     visibility: visible;
     opacity: 1;
 }
 
-.member-thumb {
+.comment-thumb {
     position: relative;
     overflow: hidden;
 }
 
-.member-thumb .thumb-overlay {
+.comment-thumb .thumb-overlay {
     background-color: rgba(220, 157, 102, 0.8);
     position: absolute;
     visibility: hidden;
@@ -295,27 +316,27 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 
 
-.team-inner {
+.comments-inner {
     margin-top:10px;
 }
 
-.team-inner-header {
+.comments-inner-header {
     font-family: 'Open Sans', sans-serif;
     font-weight:600;
     font-size:16px;
 }
 
-.team-inner-subtext {
+.comments-inner-subtext {
     font-weight:normal;
     font-size:12px;
 }
 
-.row_team {
+.row_comments {
     margin-left:-50px;
     margin-top:70px;
 }
 
-.row_team li {
+.row_comments li {
     list-style: none;
 }
 
@@ -333,22 +354,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
     visibility: visible;
     opacity: 1;
 }
-
-.project-overlay {
-    background : rgba(0,0,0,.75);
-    border : 2px solid #ff7600;
-    visibility: hidden;
-    position: absolute;
-    text-align:center;
-    padding-top:40px;
-    color: #ffffff;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    right: 0;
-    top: 0;
-}
-
 
 .project-overlay hr {
     width : 70%;
@@ -404,8 +409,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 }
 
 #contact {
-	margin-top:100px; 
-	border-top: 1px solid #cccccc; 
 	font-size:14px;
 }
 .contact-map {
@@ -428,29 +431,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 	padding-right:15px
 }
 
-.tweet_txt {
-	border-left:2px solid #ffffff; 
-	min-height:160px;
-}
-
-.twitter_user {
-	color: #FFFF33; 
-	font-size: 14px;
-	float: right;
-}
-
-.partners {
-	border-top: 2px solid #cccccc;
-}
-
-.partners .partner-item {
-    margin-bottom: 5px;
-}
-
-.footer {
-	border-top: 2px solid #cccccc; 
-	margin-top: 100px;
-}
 
 .footer_container {
 	margin-top:60px; 
@@ -462,61 +442,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 	margin-bottom: 30px;
 	font-size: 14px;
 	color:#333333;
-}
-
-.social-icon-fb {
-    background: url('../images/social-icon-fb.png') no-repeat;
-    width: 42px;
-    height: 42px;
-    display: block;
-}
-
-a:hover .social-icon-fb {
-    background: url('../images/social-icon-fb-over.png') no-repeat;
-}
-
-.social-icon-rss {
-    background: url('../images/social-icon-rss.png') no-repeat;
-    width: 42px;
-    height: 42px;
-    display: block;
-}
-
-a:hover .social-icon-rss {
-    background: url('../images/social-icon-rss-over.png') no-repeat;
-}
-
-.social-icon-twitter {
-    background: url('../images/social-icon-twitter.png') no-repeat;
-    width: 42px;
-    height: 42px;
-    display: block;
-}
-
-a:hover .social-icon-twitter {
-    background: url('../images/social-icon-twitter-over.png') no-repeat;
-}
-
-.social-icon-linkedin {
-    background: url('../images/social-icon-linkedin.png') no-repeat;
-    width: 42px;
-    height: 42px;
-    display: block;
-}
-
-a:hover .social-icon-linkedin {
-    background: url('../images/social-icon-linkedin-over.png') no-repeat;
-}
-
-.social-icon-dribbble {
-    background: url('../images/social-icon-dribbble.png') no-repeat;
-    width: 42px;
-    height: 42px;
-    display: block;
-}
-
-a:hover .social-icon-dribbble {
-    background: url('../images/social-icon-dribbble-over.png') no-repeat;
 }
 
 ul.project-gallery  li  a img:hover {
@@ -564,7 +489,7 @@ ul.project-gallery  li  a img:hover {
     font-family:  'Open Sans', sans-serif;
     font-size:20px;
     color:#ffffff;
-    margin-top:100px;
+    margin-top:50px;
 }
 
 .form-control {
@@ -578,8 +503,7 @@ ul.project-gallery  li  a img:hover {
 }
 
 .btn_loadmore {
-	margin-top:30px; 
-	margin-bottom:80px;
+	margin-top:20px;
 }
 
 .blog_box {
@@ -613,7 +537,7 @@ ul.project-gallery  li  a img:hover {
 
 
 @media (max-width:991px) {
-    .team-inner {
+    .comments-inner {
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -626,7 +550,7 @@ ul.project-gallery  li  a img:hover {
 
 
 @media (min-width:768px) and (max-width:990px) {
-    .member-thumb .thumb-overlay {
+    .comment-thumb .thumb-overlay {
         padding-left: 30%;
     }
     .project-box , .project-overlay {
@@ -653,7 +577,7 @@ ul.project-gallery  li  a img:hover {
 }
 
 @media (max-width: 768px) {
-    .member-thumb .thumb-overlay {
+    .comment-thumb .thumb-overlay {
         padding-left: 40%;
        
     }
@@ -664,7 +588,7 @@ ul.project-gallery  li  a img:hover {
 }
 
 @media (max-width: 380px) {
-    .member-thumb .thumb-overlay {
+    .comment-thumb .thumb-overlay {
             padding-left: 30%;
 
     }
@@ -680,41 +604,41 @@ ul.project-gallery  li  a img:hover {
 }
 
 @media (min-width:991px) and (max-width: 1200px) {
-	 .team_hr {
+	 .comments_hr {
 		width: 37%; 
 	}
 }
 
 @media (min-width:683px) and ( max-width: 991px) {
-	 .team_hr {
+	 .comments_hr {
 		width: 33%;
 	}
 }
 
 @media (min-width:585px) and ( max-width: 683px) {
-        .member-thumb .thumb-overlay {
+        .comment-thumb .thumb-overlay {
             padding-left: 25%;
 
         }
-	 .team_hr {
+	 .comments_hr {
 		width: 30%;
 	}
 }
 
 @media (min-width:536px) and ( max-width: 585px) {
-	 .team_hr {
+	 .comments_hr {
 		width: 28%;
 	}
 }
 
 @media  (min-width:410px) and  ( max-width: 536px) {
-	 .team_hr {
+	 .comments_hr {
 		width: 21%;
 	}
 }
 
 @media  ( max-width: 410px) {
-	 .team_hr {
+	 .comments_hr {
 		width: 11%;
 	}
 }

@@ -2,12 +2,18 @@
 <html lang="ru">
     <head>
         <title>[[*pagetitle]] — [[++site_name]]</title>
+        <base href="[[!++site_url]]" />
         <meta name="keywords" content="[[*keywords]]" />
 		<meta name="description" content="[[*description]]" />
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--<link rel="shortcut icon" href="PLACE FOR FAVICON">-->
-        
+
+        <!-- Fontawesome solid&brands -->
+        <link href="css/fontawesome.min.css"  rel='stylesheet' type='text/css'>
+        <link href="css/solid.min.css"  rel='stylesheet' type='text/css'>
+        <link href="css/brands.min.css"  rel='stylesheet' type='text/css'>
+
         <!-- Google Web Font Embed -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
         
@@ -30,13 +36,22 @@
         <div class="top-bar" id="top">
             <div class="container">
                 <div class="subheader">
-                    <div id="phone" class="pull-left">
-                            <img src="images/phone.png" alt="phone"/>
-                            020-060-0260
+                    <div class="pull-left">
+                        <i class="fas fa-phone-square-alt"></i>
+                        +7 (921) 961-6206&nbsp;&nbsp;&nbsp;+7 (812) 961-6206
                     </div>
-                    <div id="email" class="pull-right">
-                            <img src="images/email.png" alt="email"/>
-                            info@company.com
+                    <div class="pull-left">
+                        <i class="fas fa-envelope"></i>
+                        paracentr@mail.ru
+                    </div>
+                    <div class="pull-right">
+                        <a href="https://www.instagram.com/paracentr/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="pull-right">
+                        <a href="https://www.facebook.com/paracentr/"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="pull-right">
+                        <a href="https://vk.com/paracentr"><i class="fab fa-vk"></i></a>
                     </div>
                 </div>
             </div>
@@ -53,17 +68,15 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 </button>
-                                <a href="#" class="navbar-brand"><img src="images/logo.png" alt="Urbanic Template" title="Urbanic Template" /></a>
+                                <a href="#" class="navbar-brand"><img src="images/logo.png" alt="ДЗ Путилово" title="ДЗ Путилово" /></a>
                         </div>
                         <div class="navbar-collapse collapse" id="nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
-                                <li class="active"><a href="#top">HOME</a></li>
-                                <li><a href="#about">ABOUT</a></li>
-                                <li><a href="#portfolio">PORTFOLIO</a></li>
-                                <li><a href="#blog">BLOG</a></li>
-                                <li><a rel="nofollow" href="https://fb.com/templatemo" 
-                                		class="external-link" target="_parent">EXTERNAL</a></li>
-                                <li><a href="#contact">CONTACT</a></li>
+                                <li class="active"><a href="#top">Главная</a></li>
+                                <li><a href="#about">Начинающим</a></li>
+                                <li><a href="#insta">Спортсменам</a></li>
+                                <li><a href="#blog">О нас</a></li>
+                                <li><a href="#contact">Контакты</a></li>
                             </ul>
                         </div><!--/.nav-collapse -->
                     </div><!--/.container-fluid -->
@@ -81,37 +94,28 @@
                     <li data-target="#carousel" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="item active">
+                    <div class="item car-item-1 active">
                         <div class="container">
                             <div class="carousel-caption">
-                                <h1>WELCOME TO URBANIC</h1>
-                                <p>CHOOSE THE ONE SUITABLE FOR YOU</p>
-                                <p><a class="btn btn-lg btn-green" href="#" role="button" style="margin: 20px;">View Demo</a> 
-                                	<a class="btn btn-lg btn-orange" href="#" role="button">Free Download</a></p>
+                                <h1>Спортивные прыжки</h1>
+                                <p>4000 метров. Вид на Ладогу.</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="item">
+                    <div class="item car-item-2">
                         <div class="container">
                                 <div class="carousel-caption">
-                                    <div class="col-sm-6 col-md-6">
-                                    	<h1>FLUID</h1>
-                                        <p>Suspendisse pellentesque, odio vel ultricies interdum, mauris nulla ullamcorper magna, non aliquet odio velit aliquam augue.</p>
-                                    </div>
-                                    <div class="col-sm-6 col-md-6">
-                                    	<h1>ENERGY</h1>
-                                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam mattis fringilla urna.</p>
-                                    </div>
+                                    <h1>Обучение</h1>
+                                    <p>По ускоренной программе AFF</p>
                                 </div>
                         </div>
                     </div>
-                        <div class="item">
+                        <div class="item car-item-3">
                             <div class="container">
                                 <div class="carousel-caption">
-                                	<h1>RESPONSIVE LAYOUT</h1>
-                                    <p>Urbanic Bootstrap Theme is free to download and use for your sites. <br>This layout is based on Bootstrap framework.</p>
-                                    <p><a class="btn btn-lg btn-orange" href="#" role="button">Read More</a></p>
+                                	<h1>Прыжки в тандеме</h1>
+                                    <p>Незабываемые эмоции свободного падения</p>
                                 </div>
                             </div>
                         </div>
@@ -120,29 +124,20 @@
                 <a class="right carousel-control" href="#carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
-
-        <div class="welcome" id="welcome">
-            <div class="container">
-                <div class="slogan text-center">
-                    <span class="txt_darkgrey">Welcome to </span><span class="txt_orange">Urbanic Design</span>
-                    <p class="txt_slogan"><i>Lorem ipsum dolor sit amet, consect adipiscing elit. Etiam metus libero mauriec ignissim fermentum.</i></p>
-                </div>	
-            </div>
-        </div>
         
         <div class="service">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="service-item">
-                            <div>
-                                <img src="images/leaf.png" alt="icon" />
-                                <span class="service-item-header">AWESOME ICONS</span>
+                            <div class="huge-text-middle">
+                                <i class="fas fa-location-arrow"></i>
+                                <span class="service-item-header">Записаться на прыжок</span>
                             </div>
-                            <p>You do not need to provide a back link to us. You can freely use this template for any purpose. Donec eu lacus in diam euismod imperdiet eu ut turpis. Morbi felis orci, tincidunt pretium laoreet id.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
                             <div class="text-center">
                             	<a href="#" 
-                                	class="btn-read-more btn btn-orange">READ MORE</a>
+                                	class="btn-read-more btn btn-orange">Записаться</a>
                             </div>
                             <br class="clearfix"/>
                         </div>
@@ -151,13 +146,13 @@
                     
                     <div class="col-md-4">
                         <div class="service-item">
-                            <div>
-                                <img src="images/mobile.png" alt="icon"/>
-                                <span class="service-item-header">FULLY RESPONSIVE</span>
+                            <div class="huge-text-middle">
+                                <i class="fas fa-gift"></i>
+                                <span class="service-item-header">Купить сертификат</span>
                             </div>
-							<p>Urbanic Template is free Bootstrap CSS layout provided by TemplateMo. Credits go to <a rel="nofollow" href="https://getbootstrap.com" target="_parent">Bootstrap</a> and <a rel="nofollow" href="https://unsplash.com" target="_parent">Unsplash</a> for images used in this template. You may share our website link to your friends. Thank you for visiting.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
                             <div class="text-center">
-                                <a href="#" class="btn-read-more btn btn-orange">READ MORE</a>
+                                <a href="#" class="btn-read-more btn btn-orange">Купить</a>
                             </div>
                             <br class="clearfix"/>
                         </div>
@@ -166,14 +161,14 @@
                     
                     <div class="col-md-4">
                         <div class="service-item">
-                            <div>
-                                <img src="images/battery.png" alt="icon"/>
-                                <span class="service-item-header">HIGH EFFICIENCY</span>
+                            <div class="huge-text-middle">
+                                <i class="fas fa-trophy"></i>
+                                <span class="service-item-header">Спортсменам</span>
                             </div>
-                            <p>Please visit <a rel="nofollow" href="https://www.toocss.com">Too CSS</a> blog to get latest collections of great HTML Bootstrap templates for your websites. Quisque id turpis tristique, venenatis erat sit amet, venenatis turpis. Ut tellus ipsum, posuere bibendum consectetur.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
                             <div class="text-center">
                                 <a href="#" 
-                                	class="btn-read-more btn btn-orange">READ MORE</a>
+                                	class="btn-read-more btn btn-orange">Узнать больше</a>
                             </div>
                             <br class="clearfix"/>
                         </div>
@@ -183,79 +178,55 @@
             </div>
         </div>
 
-        <div class="team" id="about">
+        <div class="comments" id="about">
             <div class="container">
                 <div class="row">
                     <div class="line-header">
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left"/><span>MEET OUR TEAM</span>
-                            <hr class="team_hr team_hr_right" />
+                            <hr class="comments_hr comments_hr_left"/><span>Отзывы о нас</span>
+                            <hr class="comments_hr comments_hr_right" />
                         </div>
                     </div>
                 </div>
                 <div class="clearfix"> </div>
-                    <ul class="row row_team">
+                    <ul class="row row_comments">
                         <li class="col-lg-3 col-md-3 col-sm-6 ">
                             <div class="text-center">
-                                <div class="member-thumb">
-                                    <img src="images/member1.jpg" class="img-responsive" alt="member 1" />
-                                    <div class="thumb-overlay">
-                                        <a href="#"><span class="social-icon-fb"></span></a>
-                                        <a href="#"><span class="social-icon-twitter"></span></a>
-                                        <a href="#"><span class="social-icon-linkedin"></span></a>
-                                    </div>
+                                <div class="comment-thumb">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
                                 </div>
-                                <div class="team-inner">
-                                    <p class="team-inner-header">TRACY</p>
-                                    <p class="team-inner-subtext">Designer</p>
+                                <div class="comments-inner">
+                                    <p class="comments-inner-header">Антон Д.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-lg-3 col-md-3 col-sm-6 ">
                             <div class="text-center">
-                                <div class="member-thumb">
-                                    <img src="images/member2.jpg" class="img-responsive" alt="member 2" />
-                                    <div class="thumb-overlay">
-                                        <a href="#"><span class="social-icon-fb"></span></a>
-                                        <a href="#"><span class="social-icon-twitter"></span></a>
-                                        <a href="#"><span class="social-icon-linkedin"></span></a>
-                                    </div>
+                                <div class="comment-thumb">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
                                 </div>
-                                <div class="team-inner">
-                                    <p class="team-inner-header">MARY</p>
-                                    <p class="team-inner-subtext">Developer</p>
+                                <div class="comments-inner">
+                                    <p class="comments-inner-header">Марина С.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-lg-3 col-md-3 col-sm-6 ">
                             <div class="text-center">
-                                <div class="member-thumb">
-                                    <img src="images/member3.jpg" class="img-responsive" alt="member 3" />
-                                    <div class="thumb-overlay">
-                                        <a href="#"><span class="social-icon-fb"></span></a>
-                                        <a href="#"><span class="social-icon-twitter"></span></a>
-                                        <a href="#"><span class="social-icon-linkedin"></span></a>
-                                    </div>
+                                <div class="comment-thumb">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
                                 </div>
-                                <div class="team-inner">
-                                    <p class="team-inner-header">JULIA</p>
-                                    <p class="team-inner-subtext">Director</p>
+                                <div class="comments-inner">
+                                    <p class="comments-inner-header">Юлия К.</p>
                                 </div>
                             </div>
                         </li>
                         <li class="col-lg-3 col-md-3 col-sm-6 ">
                             <div class="text-center">
-                                <div class="member-thumb">
-                                    <img src="images/member4.jpg" class="img-responsive" alt="member 4" />
-                                    <div class="thumb-overlay">
-                                        <a href="#"><span class="social-icon-fb"></span></a>
-                                        <a href="#"><span class="social-icon-twitter"></span></a>
-                                        <a href="#"><span class="social-icon-linkedin"></span></a>
-                                    </div>
+                                <div class="comment-thumb">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
                                 </div>
-                                <div class="team-inner">
-                                    <p class="team-inner-header">LINDA</p>
-                                    <p class="team-inner-subtext">Manager</p>
+                                <div class="comments-inner">
+                                    <p class="comments-inner-header">Лидия И.</p>
                                 </div>
                             </div>
                         </li>
@@ -263,21 +234,16 @@
             </div>
         </div>
 
-        <div id="portfolio" >
+        <div id="insta" >
             <div class="container">
                 <div class="row">
                     <div class="line-header" >
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">OUR PORTFOLIO</span>
-                            <hr class="team_hr team_hr_right hr_gray" />
+                            <hr class="comments_hr comments_hr_left hr_gray"/><span class="txt_darkgrey">Наш инстаграм</span>
+                            <hr class="comments_hr comments_hr_right hr_gray" />
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                    <div class="gallery-category" style="font-size:16px; margin-top:80px;">
-                        <div class="text-center">
-                            <a class="active" href=".gallery">All</a> / <a href=".gallery-design">Web Design </a>/ <a href=".gallery-graphic">Graphic</a> / <a href=".gallery-inspiration">Inspiration</a> / <a href=".gallery-creative">Creative</a>							
-                        </div>
-                    </div>
                 </div> <!-- /.row -->
 
 
@@ -287,14 +253,7 @@
                         <li class="col-lg-2 col-md-2 col-sm-2  gallery gallery-graphic" >
                             <a class="colorbox" href="images/full-gallery-image-1.jpg" data-group="gallery-graphic">
                                 <div class="project-box">
-
                                     <img src="images/gallery-image-1.jpg" class="img-responsive" alt="gallery" />
-
-                                    <div class="project-overlay">
-                                        <h5>Graphic</h5>
-                                        <hr />
-                                        <h4>TEA POT</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -302,11 +261,6 @@
                             <a class="colorbox" href="images/full-gallery-image-2.jpg" data-group="gallery-creative">
                                 <div class="project-box">
                                     <img src="images/gallery-image-2.jpg" class="img-responsive" alt="gallery" />
-                                    <div class="project-overlay">
-                                        <h5>Creative</h5>
-                                        <hr />
-                                        <h4>BREAKFAST</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -314,11 +268,6 @@
                             <a class="colorbox" href="images/full-gallery-image-3.jpg" data-group="gallery-inspiration">
                                 <div class="project-box">
                                     <img src="images/gallery-image-3.jpg" class="img-responsive" alt="gallery" />
-                                    <div class="project-overlay">
-                                        <h5>Inspiration</h5>
-                                        <hr />
-                                        <h4>GREEN COLORS</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -326,11 +275,6 @@
                             <a class="colorbox" href="images/full-gallery-image-4.jpg" data-group="gallery-design">
                                 <div class="project-box">
                                     <img src="images/gallery-image-4.jpg" class="img-responsive" alt="gallery" />
-                                    <div class="project-overlay">
-                                        <h5>Web Design</h5>
-                                        <hr />
-                                        <h4>CAMERA</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -338,11 +282,6 @@
                             <a class="colorbox" href="images/full-gallery-image-5.jpg" data-group="gallery-inspiration">
                                 <div class="project-box">
                                     <img src="images/gallery-image-5.jpg" class="img-responsive" alt="gallery" />
-                                    <div class="project-overlay">
-                                        <h5>Inspiration</h5>
-                                        <hr />
-                                        <h4>PLANT</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -350,11 +289,6 @@
                             <a class="colorbox" href="images/full-gallery-image-6.jpg" data-group="gallery-inspiration">
                                 <div class="project-box">
                                     <img src="images/gallery-image-6.jpg" class="img-responsive" alt="gallery" />
-                                    <div class="project-overlay">
-                                        <h5>Inspiration</h5>
-                                        <hr />
-                                        <h4>CABLE TRAIN</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -363,11 +297,6 @@
                             <a class="colorbox" href="images/full-gallery-image-7.jpg" data-group="gallery-design">
                                 <div class="project-box">
                                     <img src="images/gallery-image-7.jpg" class="img-responsive" alt="gallery" />
-                                    <div class="project-overlay">
-                                        <h5>Web Design</h5>
-                                        <hr />
-                                        <h4>CITY</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -376,11 +305,6 @@
                             <a class="colorbox" href="images/full-gallery-image-8.jpg" data-group="gallery-creative">
                                 <div class="project-box">
                                     <img src="images/gallery-image-8.jpg" class="img-responsive" alt="gallery" />
-                                    <div class="project-overlay">
-                                        <h5>Creative</h5>
-                                        <hr />
-                                        <h4>BIRDS</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -389,11 +313,6 @@
                             <a class="colorbox" href="images/full-gallery-image-9.jpg" data-group="gallery-graphic">
                                 <div class="project-box">
                                     <img src="images/gallery-image-9.jpg" class="img-responsive" alt="gallery" />
-                                    <div class="project-overlay">
-                                        <h5>Graphic</h5>
-                                        <hr />
-                                        <h4>NATURE</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -402,11 +321,6 @@
                             <a class="colorbox" href="images/full-gallery-image-10.jpg" data-group="gallery-inspiration">
                                 <div class="project-box">
                                     <img src="images/gallery-image-10.jpg" class="img-responsive" alt="gallery" />
-                                    <div class="project-overlay">
-                                        <h5>Inspiration</h5>
-                                        <hr />
-                                        <h4>DOGGY</h4>
-                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -415,115 +329,9 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="row text-center">
-                    <a class="btn_loadmore btn btn-lg btn-orange" href="#" role="button">LOAD MORE</a>
+                    <a class="btn_loadmore btn btn-lg btn-orange" href="https://www.instagram.com/paracentr/" role="button"><i class="fab fa-instagram"></i> Посмотреть больше</a>
                 </div>
             </div><!-- /.container -->
-        </div>
-
-        <div id="blog">
-            <div class="container">
-                <div class="row">
-                    <div class="line-header" style="margin-top: 0px;" >
-                        <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="span_blog txt_darkgrey">BLOG POSTS</span>
-                            <hr class="team_hr team_hr_right hr_gray" />
-                        </div>
-                    </div>
-                    <br class="clearfix"/>
-                </div>
-                
-                <div class="blog_box">
-                    <div class="col-sm-5 col-md-6 blog_post">
-                        <ul class="list-inline">
-                            <li class="col-md-4">
-                                <a href="#">
-                                    <img class="img-responsive" src="images/blog-image-1.jpg" alt="gallery 1" />
-                                </a>
-                            </li>
-                            <li  class="col-md-8">
-                                <div class="pull-left">
-                                    <span class="blog_header">GRAPHIC DESIGN</span><br/>
-                                    <span>Posted by : <a class="link_orange" href="#"><span class="txt_orange">Tracy</span></a></span>
-                                </div>
-                                <div class="pull-right">
-                                    <a class="btn btn-orange" href="#" role="button">21 February 2084</a>
-                                </div>
-                                <div class="clearfix"> </div>
-                                <p class="blog_text">
-                                    Aliquam quis rutrum risus, ut condimentum ipsum. Nullam aliquet libero augue, eget auctor felis vulputate id. Proin a enim eu libero ornare malesuada. Sed iaculis fringilla lacinia. Sed laoreet lectus vitae [...]
-                                </p>
-                            </li>
-                        </ul>
-                    </div> <!-- /.blog_post 1 -->
-                    
-                    <div class="col-sm-5 col-md-6 blog_post">
-                        <ul class="list-inline">
-                            <li class="col-md-4"><a href="#">
-                                <img class="img-responsive" src="images/blog-image-2.jpg" alt="gallery 2" /></a>
-                            </li>
-                            <li class="col-md-8">
-                                <div class="pull-left">
-                                    <span class="blog_header">WEBSITE TEMPLATE</span><br/>
-                                    <span>Posted by : <a class="link_orange" href="#"><span class="txt_orange">Mary</span></a></span>
-                                </div>
-                                <div class="pull-right">
-                                    <a class="btn btn-orange" href="#" role="button">18 February 2084</a>
-                                </div>
-                                <div class="clearfix"> </div>
-                                <p class="blog_text">
-                                Morbi imperdiet ipsum sit amet dui pharetra, vulputate porta neque tristique. Quisque id turpis tristique, venenatis erat sit amet, venenatis turpis. Ut tellus ipsum, posuere bibendum [...] </p>
-                            </li>
-                        </ul>	
-                    </div><!-- /.blog_post 2 -->
-                    
-                    <div class="clear"></div>
-                    
-                    <div class="col-sm-5 col-md-6 blog_post">
-                        <ul class="list-inline">
-                            <li class="col-md-4"><a href="#">
-                                <img class="img-responsive" src="images/blog-image-2.jpg" alt="gallery 3" /></a>
-                            </li>
-                            <li class="col-md-8">
-                                <div class="pull-left">
-                                    <span class="blog_header">WEB DEVELOPMENT</span><br/>
-                                    <span>Posted by : <a class="link_orange" href="#"><span class="txt_orange">Julia</span></a></span>
-                                </div>
-                                <div class="pull-right">
-                                    <a class="btn btn-orange" href="#" role="button">14 February 2084</a>
-                                </div>
-                                <div class="clearfix"> </div>
-                                <p class="blog_text">
-                                        Fusce molestie tellus risus, id commodo turpis convallis id. Morbi mattis sapien sapien, vitae lacinia ante interdum sit amet. Praesent eget varius diam, ac tempor est. Mauris at scelerisque magna [...]
-                                </p>
-                            </li>
-                        </ul>	
-                    </div><!-- /.blog_post 3 -->
-                    
-                    <div class="col-sm-5 col-md-6 blog_post">
-                        <ul class="list-inline">
-                            <li class="col-md-4">
-                                <a href="#">
-                                    <img class="img-responsive" src="images/blog-image-1.jpg"  alt="gallery 4" />
-                                </a>
-                            </li>
-                            <li class="col-md-8">
-                                <div class="pull-left">
-                                    <span class="blog_header">NEW FLUID LAYOUT</span><br/>
-                                    <span>Posted by : <a class="link_orange" href="#"><span class="txt_orange">Linda</span></a></span>
-                                </div>
-                                <div class="pull-right">
-                                    <a class="btn btn-orange" href="#" role="button">11 February 2084</a>
-                                </div>
-                                <div class="clearfix"> </div>
-                                <p class="blog_text">
-                                    In venenatis sodales purus a cursus. Ut consectetur, libero ac elementum tristique, enim ante aliquet mauris, scelerisque congue magna neque ac purus. Aliquam facilisis volutpat odio [...]
-                                </p>
-                            </li>
-                        </ul>
-                    </div> <!-- /.blog_post 4 -->
-                    
-                </div>
-            </div>
         </div>
 
         <div id="contact">
@@ -531,32 +339,31 @@
                 <div class="row">
                     <div class="line-header head_contact">
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">CONTACT US</span>
-                            <hr class="team_hr team_hr_right hr_gray"/>
+                            <hr class="comments_hr comments_hr_left hr_gray"/><span class="txt_darkgrey">Контакты</span>
+                            <hr class="comments_hr comments_hr_right hr_gray"/>
                         </div>
                     </div>
 
                     <div class="col-md-8">
                         <div class="contact-map" id="map-canvas"> </div>
                         <div class="clearfix"></div>
-                        <i>You can find us on 80 Dagon Studio, Yankin Street, <span class="txt_orange">Digital Estate</span> in Yangon.</i>
+                        <i>Мы находимся в Ленобласти, рядом с посёлком <span class="txt_orange">Путилово</span></i>
                     </div>
                     <div class="col-md-4 contact_right">
-                        <p>Lorem ipsum dolor sit amet, consectetu adipiscing elit pendisse as a molesti.</p>
-                        <p><img src="images/location.png" alt="icon 1" /> 80 Dagon Studio, Yakin Street, Digital Estate</p>
-                        <p><img src="images/phone1.png"  alt="icon 2" /> 090-080-0110</p>
-                        <p><img src="images/globe.png" alt="icon 3" /><a class="link_orange" href="#"><span class="txt_orange">www.company.com</span></a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> 59.834556, 31.478623</p>
+                        <p><i class="fas fa-phone-square-alt"></i> +7 (921) 961-62-06&nbsp;&nbsp;&nbsp;+7 (812) 961-62-06</p>
+                        <p><i class="fas fa-globe-europe"></i> <a class="link_orange" href="http://www.freeflyorange.com/"><span class="txt_orange">www.freeflyorange.com</span></a></p>
                         <form class="form-horizontal" action="#">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Name..." maxlength="40" />
+                                <input type="text" class="form-control" placeholder="Ваше имя..." maxlength="40" />
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email..." maxlength="40" />
+                                <input type="email" class="form-control" placeholder="Ваш email..." maxlength="40" />
                             </div>
                             <div class="form-group">
-                                <textarea  class="form-control" style="height: 130px;" placeholder="Write down your message..."></textarea>
+                                <textarea  class="form-control" style="height: 130px;" placeholder="Напишите нам..."></textarea>
                             </div>
-                            <button type="submit" class="btn btn-orange pull-right">SEND</button>
+                            <button type="submit" class="btn btn-orange pull-right">Отправить</button>
                         </form>
                         	
                     </div>
@@ -564,106 +371,12 @@
             </div><!-- /.container -->
         </div>
 
-
-        <div class="tweets">
-            <div class="container">
-                <div class="row" style="margin-top:20px;">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-1">
-                                <img src="images/quote.png" alt="icon" />
-                        </div>
-                        <div class="col-md-7 tweet_txt" >
-                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit suspendiise as a molesti neque vestibulum,  persiutsor de andues mare fricilus ipsum dolor sit amet cons forukus.</span>
-                                <br/>
-                                <span class="twitter_user">Moe Moe, Yangon</span>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
-                 </div><!-- /.row -->
-            </div><!-- /.container -->
-        </div>
-
-        <div class="partners" >
-            <div class="container">
-                <div class="row">
-
-
-                    <div class="line-header" >
-                        <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">OUR PARTNERS</span>
-                            <hr class="team_hr team_hr_right hr_gray" />
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-
-
-                    <div class="text-center">
-
-                        <div style="margin-top:60px;">
-                            <ul class="list-inline">
-                                <li class="col-sm-2 col-md-2 partner-item">
-                                    <a href="#"><img src="images/partner1.jpg" class="img-responsive" alt="partner 1" /></a>
-                                </li>
-                                <li class="col-sm-2 col-md-2 partner-item">
-                                    <a href="#"><img src="images/partner2.jpg" class="img-responsive" alt="partner 2" /></a>
-                                </li>
-                                <li class="col-sm-2 col-md-2 partner-item">
-                                    <a href="#"><img src="images/partner3.jpg" class="img-responsive" alt="partner 3" /></a>
-                                </li>
-                                <li class="col-sm-2 col-md-2 partner-item">
-                                    <a href="#"><img src="images/partner4.jpg" class="img-responsive" alt="partner 4" /></a>
-                                </li>
-                                <li class="col-sm-2 col-md-2 partner-item">
-                                    <a href="#"><img src="images/partner5.jpg" class="img-responsive" alt="partner 5" /></a>
-                                </li>
-                                <li class="col-sm-2 col-md-2 partner-item">
-                                    <a href="#"><img src="images/partner6.jpg" class="img-responsive" alt="partner 6" /></a>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="footer" >
             <div class="container">
                 <div class="row">
                     <div class="text-center">
-
                         <div class="footer_container">
-                            <ul class="list-inline">
-                                <li>
-                                    <a href="#">
-                                        <span class="social-icon-fb"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="social-icon-rss"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="social-icon-twitter"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="social-icon-linkedin"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="social-icon-dribbble"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="height30"></div>
-                            <a class="btn btn-lg btn-orange" href="#" role="button" id="btn-back-to-top">Back To Top</a>
+                            <a class="btn btn-lg btn-orange" href="#" role="button" id="btn-back-to-top">Наверх</a>
                             <div class="height30"></div>
                         </div>
                         <div class="footer_bottom_content">
