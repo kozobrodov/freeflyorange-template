@@ -14,9 +14,6 @@ jQuery(function($) {
         document.body.appendChild(script);
 
         top_menu_height = $('.top-menu').height();
-        // scroll spy to auto active the nav item
-        $('body').scrollspy({ target: '#nav-bar', offset: top_menu_height + 10 });
-		$('.external-link').unbind('click');
 
         // scroll to top
         $('#btn-back-to-top').click(function(e){
@@ -34,27 +31,6 @@ jQuery(function($) {
             }
             $(this).blur();
             return false;
-        });
-		/*
-		var dt = window.atob('IHwgRGVzaWduOiA8YSByZWw9Im5vZm9sbG93IiBocmVmPSJodHRwOi8vd3d3LnRlbXBsYXRlbW8uY29tL3RtLTM5NS11cmJhbmljIiB0YXJnZXQ9Il9wYXJlbnQiPlVyYmFuaWM8L2E+'); // decode the string
-		var div = document.getElementById('footer-line');
-		div.innerHTML = div.innerHTML + dt;
-		*/
-        // to stick navbar on top
-        $('.top-menu ').stickUp();
-
-        // gallery category
-        $('.gallery-category a').click(function(e){
-            e.preventDefault(); 
-            $(this).parent().children('a').removeClass('active');
-            $(this).addClass('active');
-            var linkClass = $(this).attr('href');
-            $('.gallery').each(function(){
-                if($(this).is(":visible") == true){
-                   $(this).hide();
-                };
-            });
-            $(linkClass).fadeIn();  
         });
 
         //gallery light box setup
