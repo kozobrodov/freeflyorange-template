@@ -61,12 +61,3 @@ function scrollTo(selectors)
     $('html,body').animate({ scrollTop: selector_top }, 'slow');
 
 }
-
-function toggleMenu() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
