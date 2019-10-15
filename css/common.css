@@ -2,7 +2,7 @@ body, html { overflow-x:hidden; }
 
 body {
     background-color: #ffffff;
-    font-family:  'Open Sans', Arial, Helvetice Neue, sans-serif;
+    font-family:  'Open Sans', Arial, 'Helvetice Neue', sans-serif;
     font-size: 12px;
 	
 	font-weight: 300; 
@@ -11,7 +11,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neue, sans-serif; }
+h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, 'Helvetice Neue', sans-serif; }
 
 * {
   -webkit-border-radius: 0 !important;
@@ -30,12 +30,12 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
 
 .huge-text-middle .fas {
     font-size:2.5em;
-    display:talbe-cell;
+    display:table-cell;
     vertical-align:middle;
 }
 
 .huge-text-middle span {
-    display:talbe-cell;
+    display:table-cell;
     vertical-align:middle;
 }
 
@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, Helvetice Neu
  margin:0;
  padding: 0;
  text-indent: 0;
- list-style-type: 0;
+ list-style-type: none;
 }
 
 .topnav > ul {
