@@ -1,9 +1,5 @@
 var top_menu_height = 0;
 jQuery(function($) {
-		$(window).load( function() {
-			$('.external-link').unbind('click');	
-		});
-		
         $(document).ready( function() {
 
         // load google map
