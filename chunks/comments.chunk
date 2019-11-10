@@ -1,0 +1,57 @@
+<!-- This is just a demo chunk to show how this block will look like
+    TODO: remove it when appropriate plugin is installed -->
+<div class="comments">
+    <div class="container">
+        <div class="row">
+            <div class="line-header">
+                <div class="text-center">
+                    <hr class="comments_hr comments_hr_left"/><span>Отзывы о нас</span>
+                    <hr class="comments_hr comments_hr_right" />
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+        <ul class="row row_comments">
+            <li class="col-lg-3 col-md-3 col-sm-6 ">
+                <div class="text-center">
+                    <div class="comment-thumb">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
+                    </div>
+                    <div class="comments-inner">
+                        <p class="comments-inner-header">Антон Д.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-6 ">
+                <div class="text-center">
+                    <div class="comment-thumb">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
+                    </div>
+                    <div class="comments-inner">
+                        <p class="comments-inner-header">Марина С.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-6 ">
+                <div class="text-center">
+                    <div class="comment-thumb">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
+                    </div>
+                    <div class="comments-inner">
+                        <p class="comments-inner-header">Юлия К.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="col-lg-3 col-md-3 col-sm-6 ">
+                <div class="text-center">
+                    <div class="comment-thumb">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
+                    </div>
+                    <div class="comments-inner">
+                        <p class="comments-inner-header">Лидия И.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

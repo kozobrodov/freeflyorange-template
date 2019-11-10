@@ -1,0 +1,52 @@
+<div class="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-item">
+                    <div class="huge-text-middle">
+                        <i class="fas fa-location-arrow"></i>
+                        <span class="service-item-header">Записаться на прыжок</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
+                    <div class="text-center">
+                        <a href="#"
+                           class="btn-read-more btn btn-blue">Записаться</a>
+                    </div>
+                    <br class="clearfix"/>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-item">
+                    <div class="huge-text-middle">
+                        <i class="fas fa-gift"></i>
+                        <span class="service-item-header">Купить сертификат</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
+                    <div class="text-center">
+                        <a href="#" class="btn-read-more btn btn-blue">Купить</a>
+                    </div>
+                    <br class="clearfix"/>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-item">
+                    <div class="huge-text-middle">
+                        <i class="fas fa-trophy"></i>
+                        <span class="service-item-header">Спортсменам</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ligula orci, lobortis non felis vitae, lacinia sagittis risus. Curabitur gravida lorem scelerisque sem maximus, vel scelerisque ex volutpat. Curabitur sit amet ante vel sapien laoreet congue ut eget massa.</p>
+                    <div class="text-center">
+                        <a href="#"
+                           class="btn-read-more btn btn-blue">Узнать больше</a>
+                    </div>
+                    <br class="clearfix"/>
+                </div>
+                <br class="clearfix"/>
+            </div>
+        </div>
+    </div>
+</div>

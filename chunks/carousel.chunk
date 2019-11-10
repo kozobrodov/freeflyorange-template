@@ -1,0 +1,40 @@
+<div>
+    <!-- Carousel -->
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item car-item-1 active">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Спортивные прыжки</h1>
+                        <p>4000 метров. Вид на Ладогу.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item car-item-2">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Обучение</h1>
+                        <p>По ускоренной программе AFF</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item car-item-3">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Прыжки в тандеме</h1>
+                        <p>Незабываемые эмоции свободного падения</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div>
+</div>
