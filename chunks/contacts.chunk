@@ -15,9 +15,9 @@
                 <i>Мы находимся в Ленобласти, рядом с посёлком <span class="txt_orange">Путилово</span></i>
             </div>
             <div class="col-md-4 contact_right">
-                <p><i class="fas fa-map-marker-alt"></i> 59.834556, 31.478623</p>
-                <p><i class="fas fa-phone-square-alt"></i> +7 (921) 961-62-06&nbsp;&nbsp;&nbsp;+7 (812) 961-62-06</p>
-                <p><i class="fas fa-globe-europe"></i> <a class="link_orange" href="http://www.freeflyorange.com/"><span class="txt_orange">www.freeflyorange.com</span></a></p>
+                <p><i class="fas fa-map-marker-alt"></i> [[$dzCoordinates]]</p>
+                <p><i class="fas fa-phone-square-alt"></i>[[$telephoneNumber]]</p>
+                <p><i class="fas fa-globe-europe"></i> <a class="link_orange" href="/"><span class="txt_orange">[[$siteUrl]]</span></a></p>
                 <form class="form-horizontal" action="#">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Ваше имя..." maxlength="40" />
