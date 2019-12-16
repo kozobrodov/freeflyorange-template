@@ -14,88 +14,10 @@
 
 
         <div class="clearfix"></div>
-        <div class="text-center">
-            <ul class="project-gallery" >
-                <li class="col-lg-2 col-md-2 col-sm-2  gallery gallery-graphic" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-1.jpg" data-group="gallery-graphic">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-1.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-                <li class="col-lg-2 col-md-2 col-sm-2  gallery gallery-creative" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-2.jpg" data-group="gallery-creative">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-2.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-                <li class="col-lg-2 col-md-2 col-sm-2  gallery gallery-inspiration" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-3.jpg" data-group="gallery-inspiration">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-3.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-                <li class="col-lg-2 col-md-2 col-sm-2  gallery gallery-design" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-4.jpg" data-group="gallery-design">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-4.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-                <li class="col-lg-2 col-md-2 col-sm-2  gallery gallery-inspiration" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-5.jpg" data-group="gallery-inspiration">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-5.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-                <li class="col-lg-2 col-md-2 col-sm-2  gallery gallery-inspiration" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-6.jpg" data-group="gallery-inspiration">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-6.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-
-                <li class="col-lg-2 col-md-2 col-sm-2 gallery gallery-design" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-7.jpg" data-group="gallery-design">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-7.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-
-                <li class="col-lg-2 col-md-2 col-sm-2 gallery gallery-creative" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-8.jpg" data-group="gallery-creative">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-8.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-
-                <li class="col-lg-2 col-md-2 col-sm-2 gallery gallery-graphic" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-9.jpg" data-group="gallery-graphic">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-9.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-
-                <li class="col-lg-2 col-md-2 col-sm-2 gallery gallery-inspiration" >
-                    <a class="colorbox" href="/assets/images/full-gallery-image-10.jpg" data-group="gallery-inspiration">
-                        <div class="project-box">
-                            <img src="/assets/images/gallery-image-10.jpg" class="img-responsive" alt="gallery" />
-                        </div>
-                    </a>
-                </li>
-
-            </ul><!-- /.gallery -->
-        </div>
+        <div id="pixlee_container"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'c6zG6GuUTYFXBCr4f3bW'});Pixlee.addSimpleWidget({widgetId:'23955'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
         <div class="clearfix"></div>
         <div class="row text-center">
-            <a class="btn_loadmore btn btn-lg btn-blue" href="https://www.instagram.com/paracentr/" role="button"><i class="fab fa-instagram"></i> Посмотреть больше</a>
+            <a class="btn_loadmore btn btn-lg btn-blue" href="[[$instaLink]]" role="button"><i class="fab fa-instagram"></i> Посмотреть больше</a>
         </div>
     </div><!-- /.container -->
 </div>
