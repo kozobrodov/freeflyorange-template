@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+sitemap: https://dzputilovo.net/sitemap.xml
+
+User-agent: *
+Disallow: /404.html
