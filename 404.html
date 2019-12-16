@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+    <title>Страница не найдена — DZ Putilovo</title>
+    <base href="//dzputilovo.net/" />
+    <meta charset="[[++modx_charset]]" />
+    [[$favicon]]
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            background: url(images/404.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/404.jpg', sizingMethod='scale')";
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/404.jpg', sizingMethod='scale');
+        }
+        .content {
+            position:fixed;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            text-align:center;
+        }
+        h1 {font-size:3em}
+        h1, h2, a {
+            font-family: 'Open Sans', Arial, 'Helvetice Neue', sans-serif;
+            color: #fff;
+            text-shadow:
+                1px 1px 0 #000,
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+        }
+        a {
+            font-size:2em;
+            text-decoration-style:dotted;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h1>404</h1>
+    <h2>Страница не найдена</h2>
+    <p><a href="[[++site_url]]">На главную</a></p>
+</div>
+</body>
+</html>
