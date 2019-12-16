@@ -1,5 +1,5 @@
-<!-- This is just a demo chunk to show how this block will look like
-    TODO: remove it when appropriate plugin is installed -->
+<!-- Pixlee plugin doesn't support something like 'limit', so we should consider getting rid of it in future
+    TODO: replace pixlee widget with something else -->
 <div id="insta" >
     <div class="container">
         <div class="row">
