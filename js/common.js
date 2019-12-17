@@ -2,14 +2,6 @@ var top_menu_height = 0;
 jQuery(function($) {
     $(document).ready( function() {
         initialize();
-
-        //gallery light box setup
-        $('a.colorbox').colorbox({
-                                    rel: function(){
-                                        return $(this).data('group');
-
-                                    }
-        });
     });
 });
 
@@ -28,5 +20,12 @@ function initialize() {
                 $temp.remove();
             })
             .appendTo(element);
+    });
+
+    //gallery light box setup
+    $('a.colorbox').colorbox({
+        rel: function() {
+            return $(this).data('group');
+        }
     });
 }
