@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, 'Helvetice Ne
 
 .fab, .fas {
     font-size:1.2em;
-    color:#0061a8;
+    color:#005089;
 }
 
 .btn-blue .fab, .btn-blue .fab {
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, 'Helvetice Ne
     text-align: justify; 
     margin-top: 25px;
     font-size: 14px;
-    color: #929292;
+    color: #555555;
 }
 
 .subheader {
@@ -182,12 +182,12 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, 'Helvetice Ne
     font-weight: normal;
     margin-top: 12px;
     font-size: 12px;
-    color: #0061a8;
+    color: #005089;
 }
 
 
 .btn-blue {
-    background-color: #0061a8;
+    background-color: #005A9F;
     border-bottom:2px solid #5a8cb0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -242,7 +242,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, 'Helvetice Ne
 }
 
 .topnav .active {
-  background-color: #0061a8;
+  background-color: #005A9F;
   color: #fff !important;
 }
 
@@ -288,7 +288,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, 'Helvetice Ne
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #0061a8;
+  background-color: #005A9F;
   color: #fff;
 }
 
@@ -387,7 +387,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, 'Helvetice Ne
 }
 
 .txt_blue {
-    color: #0061a8;
+    color: #005089;
 }
 
 .line-header span {
@@ -433,7 +433,7 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, 'Helvetice Ne
 }
 
 ul.project-gallery  li  a img:hover {
-    border: 3px solid #0061a8;
+    border: 3px solid #005089;
 }
 
 .link_orange:hover {
