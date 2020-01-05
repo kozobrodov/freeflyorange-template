@@ -76,18 +76,6 @@ h1, h2, h3, h4, h5, h6, span, p { font-family: 'Open Sans', Arial, 'Helvetice Ne
     color:#ffffff;
 }
 
-.fas.copy {
-    font-size:0.8em;
-    color:#638ead;
-    margin-left:0.5em;
-    cursor:pointer;
-    transition:0.2s;
-}
-
-.fas.copy:hover {
-    font-size:0.9em;
-}
-
 /* ------ Carousel ----- */
 
 #carousel {
