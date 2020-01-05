@@ -15,9 +15,9 @@
                 <i>Мы находимся в Ленобласти, рядом с посёлком <span class="txt_orange">Путилово</span></i>
             </div>
             <div class="col-md-4 contact_right">
-                <p><i class="fas fa-map-marker-alt"></i> <span class="copyable">[[$dzCoordinates]]</span></p>
-                <p><i class="fas fa-phone-square-alt"></i> [[$telephoneNumber]]</p>
-                <p><i class="fas fa-globe-europe"></i> <a class="link_orange" href="/"><span class="txt_orange">[[$siteUrl]]</span></a></p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span class="copyable">[[$dzCoordinates]]</span></p>
+                <p><i class="fas fa-phone-square-alt" aria-hidden="true"></i> [[$telephoneNumber]]</p>
+                <p><i class="fas fa-globe-europe" aria-hidden="true"></i> <a class="link_orange" href="/"><span class="txt_orange">[[$siteUrl]]</span></a></p>
                 <form class="form-horizontal" action="#">
                     <div class="form-group">
                         <label>
