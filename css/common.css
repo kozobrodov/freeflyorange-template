@@ -456,6 +456,10 @@ ul.project-gallery  li  a img:hover {
   cursor: pointer;
 }
 
+label {
+    width:100%;
+}
+
 .form-control {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
