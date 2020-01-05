@@ -412,13 +412,16 @@
                         <p><i class="fas fa-globe-europe"></i> <a class="link_orange" href="http://www.freeflyorange.com/"><span class="txt_orange">www.freeflyorange.com</span></a></p>
                         <form class="form-horizontal" action="#">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Ваше имя..." maxlength="40" />
+                                <label>
+                                    <span class="text-gray">Ваша электронная почта:</span>
+                                    <input type="email" class="form-control" maxlength="80" />
+                                </label>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Ваш email..." maxlength="40" />
-                            </div>
-                            <div class="form-group">
-                                <textarea  class="form-control" style="height: 130px;" placeholder="Напишите нам..."></textarea>
+                                <label>
+                                    <span class="text-gray">Сообщение:</span>
+                                    <textarea  class="form-control" style="height: 130px;"></textarea>
+                                </label>
                             </div>
                             <button type="submit" class="btn btn-blue pull-right">Отправить</button>
                         </form>
