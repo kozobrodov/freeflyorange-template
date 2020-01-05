@@ -458,6 +458,7 @@ ul.project-gallery  li  a img:hover {
 
 label {
     width:100%;
+    font-weight:normal;
 }
 
 .form-control {
