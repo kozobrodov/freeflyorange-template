@@ -1,0 +1,37 @@
+[[!FormIt?
+&hooks=`recaptcha,spam,email,redirect`
+&emailTpl=`feedbackEmail`
+&emailTo=`info@dzputilovo.net`
+&redirectTo=`[[~[[*id]]]]`
+&validate=`workingAddress:blank,
+email:email:required,
+text:required:stripTags
+]]
+
+<form action="[[~[[*id]]]]" method="post" class="form-horizontal">
+    <input type="hidden" name="workingAddress" value="" />
+
+    <div class="form-group">
+        <label>
+            <span class="text-gray">Ваша электронная почта:</span>
+            <span class="has-error">
+                <span class="help-block">[[!+fi.error.email]]</span>
+            </span>
+            <input type="email" name="email" value="[[!+fi.email]]" class="form-control" maxlength="80" />
+        </label>
+    </div>
+    <div class="form-group">
+        <label>
+            <span class="text-gray">Сообщение:</span>
+            <span class="has-error">
+                <span class="help-block">[[!+fi.error.text]]</span>
+            </span>
+            <textarea class="form-control" style="height: 130px;" name="text" value="[[!+fi.text]]">[[!+fi.text]]</textarea>
+        </label>
+    </div>
+    <div class="form-group">
+        [[!+formit.recaptcha_html]]
+        [[!+fi.error.recaptcha]]
+    </div>
+    <button type="submit" class="btn btn-blue pull-right">Отправить</button>
+</form>
