@@ -1,7 +1,7 @@
 [[!FormIt?
 &hooks=`recaptcha,spam,email,redirect`
 &emailTpl=`feedbackEmail`
-&emailTo=`info@dzputilovo.net`
+&emailTo=`[[$email]]`
 &redirectTo=`[[~[[*id]]]]`
 &validate=`workingAddress:blank,
 email:email:required,
