@@ -8,7 +8,7 @@ email:email:required,
 text:required:stripTags
 ]]
 
-<form action="[[~[[*id]]]]" method="post" class="form-horizontal">
+<form action="[[~[[*id]]]]#feedbackForm" method="post" class="form-horizontal" id="feedbackForm">
     <input type="hidden" name="workingAddress" value="" />
 
     <div class="form-group">
