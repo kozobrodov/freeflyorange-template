@@ -2,6 +2,7 @@
 &hooks=`recaptcha,spam,email,redirect`
 &emailTpl=`feedbackEmail`
 &emailTo=`[[$email]]`
+&successMessage=`Сообщение отправлено!`
 &redirectTo=`[[~[[*id]]]]`
 &validate=`workingAddress:blank,
 email:email:required,
@@ -29,7 +30,10 @@ text:required:stripTags
             <textarea class="form-control" style="height: 130px;" name="text" value="[[!+fi.text]]">[[!+fi.text]]</textarea>
         </label>
     </div>
-    <div class="form-group">
+    <div class="form-group has-success">
+        <span class="help-block">[[!+fi.successMessage]]</span>
+    </div>
+    <div class="form-group has-success">
         [[!+formit.recaptcha_html]]
         [[!+fi.error.recaptcha]]
     </div>
