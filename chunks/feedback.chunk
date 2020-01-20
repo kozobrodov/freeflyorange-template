@@ -1,5 +1,5 @@
 [[!FormIt?
-&hooks=`recaptcha,spam,email,redirect`
+&hooks=`recaptchav2,spam,email,redirect`
 &emailTpl=`feedbackEmail`
 &emailTo=`[[$email]]`
 &successMessage=`Сообщение отправлено!`
@@ -27,15 +27,17 @@ text:required:stripTags
             <span class="has-error">
                 <span class="help-block">[[!+fi.error.text]]</span>
             </span>
-            <textarea class="form-control" style="height: 130px;" name="text" value="[[!+fi.text]]">[[!+fi.text]]</textarea>
+            <textarea class="form-control" style="height: 130px;" name="text">[[!+fi.text]]</textarea>
         </label>
+    </div>
+    <div class="form-group has-success">
+        [[!recaptchav2_render]]
     </div>
     <div class="form-group has-success">
         <span class="help-block">[[!+fi.successMessage]]</span>
     </div>
-    <div class="form-group has-success">
-        [[!+formit.recaptcha_html]]
-        [[!+fi.error.recaptcha]]
+    <div class="form-group has-error">
+        <span class="help-block">[[!+fi.error.recaptchav2_error]]</span>
     </div>
     <button type="submit" class="btn btn-blue pull-right">Отправить</button>
 </form>
