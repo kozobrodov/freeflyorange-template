@@ -1,0 +1,35 @@
+<?php
+    $settings = $modx->getCollection('payments');
+    // Get parameters needed for redirect
+    $test_mode = $modx->getOption('isTestMode', $settings);
+    $paymentPageUrl = $modx->getOption('baseUrl', $settings);
+    $login = $modx->getOption('login', $settings);
+
+    $pass = '';
+    if ($test_mode) {
+        $modx->log(xPDO::LOG_LEVEL_INFO,"Test mode for payments is enabled");
+        $pass = $modx->getOption('testPass1', $settings);
+    } else {
+        $pass = $modx->getOption('pass1', $settings);
+    }
+
+    // Generate random invoice ID
+    $inv_id = '';
+    for($i = 0; $i < 7; $i++) {
+        $inv_id .= mt_rand(0, 9);
+    }
+
+    // Create URL for redirect
+    // build CRC value
+    $crc  = md5("$login:$paymentSum:$inv_id:$pass");
+
+    // build URL
+    $url = "$paymentPageUrl?MerchantLogin=$login&".
+    "OutSum=$paymentSum&InvId=$inv_id&Description=$paymentDescription&SignatureValue=$crc";
+
+    // And finally redirect:
+    $modx->log(xPDO::LOG_LEVEL_INFO,"Redirecting user for payment: $url");
+    $modx->sendRedirect($url,array('type' => 'REDIRECT_HEADER'));
+
+    return true;
+?>

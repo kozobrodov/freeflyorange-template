@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="line-header" style="margin-top:0 !important;">
+        <div class="text-center">
+            <hr class="comments_hr comments_hr_left hr_gray"/><span class="txt_darkgrey">Купить сертификат</span>
+            <hr class="comments_hr comments_hr_right hr_gray"/>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <p>
+            Дарите эмоции, а не пылесборники! Поверьте, для близкого вам человека тандем прыжок станет незабываемым опытом в жизни и именно вы откроете ему дверь в небо!
+        </p>
+        <p>
+            Воспользуйтесь следующей формой, чтобы купить подарочный сертификат. В случае успешной оплаты мы пришлём вам письмо на указанный email-адрес с номер сертификата. Для совершения прыжка достаточно записаться на любой удобный день (например, по телефону), приехать и сказать номер сертификата при оформлении документов.
+        </p>
+    </div>
+    <div class="col-md-6">
+        [[!FormIt?
+        &hooks=`spam,paymentHook`
+        &paymentSum=9500
+        &paymentDescription=`Оплата сертификата на прыжок с парашютом (тандем)`
+        &validate=`someAddress:blank,
+        email:email:required
+        ]]
+        <form action="[[~[[*id]]]]#buyCertificateForm" method="post" class="form-horizontal" id="buyCertificateForm">
+            <input type="hidden" name="someAddress" value="" />
+
+            <div class="form-group">
+                <label>
+                    <span class="text-gray">Ваша электронная почта:</span>
+                    <span class="has-error">
+                        <span class="help-block">[[!+fi.error.email]]</span>
+                    </span>
+                    <input type="email" name="email" value="[[!+fi.email]]" class="form-control" maxlength="80" />
+                </label>
+            </div>
+            <div class="form-group text-right">
+                <span class="help-block">Стоимость сертификата: <b>9500</b> рублей</span>
+            </div>
+            <input type="submit" name="buyCertificateForm" value="Купить" class="btn btn-blue pull-right"/>
+        </form>
+    </div>
+</div>

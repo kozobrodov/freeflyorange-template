@@ -1,5 +1,6 @@
 [[!FormIt?
 &hooks=`recaptchav2,spam,email,redirect`
+&submitVar=`feedbackForm`
 &emailTpl=`feedbackEmail`
 &emailTo=`[[$email]]`
 &successMessage=`Сообщение отправлено!`
@@ -39,5 +40,5 @@ text:required:stripTags
     <div class="form-group has-error">
         <span class="help-block">[[!+fi.error.recaptchav2_error]]</span>
     </div>
-    <button type="submit" class="btn btn-blue pull-right">Отправить</button>
+    <input type="submit" name="feedbackForm" value="Отправить" class="btn btn-blue pull-right"/>
 </form>
