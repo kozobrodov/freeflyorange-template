@@ -2,13 +2,13 @@
     $settings = $modx->getCollection('payments');
 
     // Get parameters needed for redirect
-    $test_mode = $modx->getOption('isTestMode', $settings);
-    $test_mode_int = (int)$test_mode;
+    $testMode = $modx->getOption('isTestMode', $settings);
+    $testModeInt = (int)$testMode;
     $paymentPageUrl = $modx->getOption('baseUrl', $settings);
     $login = $modx->getOption('login', $settings);
 
     $pass = '';
-    if ($test_mode) {
+    if ($testMode) {
         $modx->log(xPDO::LOG_LEVEL_INFO,"Test mode for payments is enabled");
         $pass = $modx->getOption('testPass1', $settings);
     } else {
@@ -16,23 +16,24 @@
     }
 
     // Generate random invoice ID
-    $inv_id = '';
+    $invId = '';
     for($i = 0; $i < 7; $i++) {
-        $inv_id .= mt_rand(0, 9);
+        $invId .= mt_rand(0, 9);
     }
 
     // Get user email
-    $user_email = 'Shp_email=' . $hook->getValue('email');
-    $certNo = 'Shp_certNo=' . $inv_id;
+    $userEmailValue = $hook->getValue('email');
+    $userEmail = 'Shp_email=' . $userEmailValue;
+    $certNo = 'Shp_certNo=' . $invId;
 
     // Create URL for redirect
     // build CRC value
-    $crc  = md5("$login:$paymentSum:$inv_id:$pass:$certNo:$user_email");
+    $crc  = md5("$login:$paymentSum:$invId:$pass:$certNo:$userEmail");
 
     // build URL
-    $url = "$paymentPageUrl?IsTest=$test_mode_int&MerchantLogin=$login&".
-    "OutSum=$paymentSum&InvId=$inv_id&Description=$paymentDescription&SignatureValue=$crc".
-    "&$certNo&$user_email";
+    $url = "$paymentPageUrl?IsTest=$testModeInt&MerchantLogin=$login&".
+    "OutSum=$paymentSum&InvId=$invId&Description=$paymentDescription&SignatureValue=$crc".
+    "&Email=$userEmailValue&$certNo&$userEmail";
 
     // And finally redirect:
     $modx->log(xPDO::LOG_LEVEL_INFO,"Redirecting user for payment: $url");
