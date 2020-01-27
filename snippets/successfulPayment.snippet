@@ -30,6 +30,19 @@
         exit();
     }
 
-    // todo: Send mail
+    // Send mail to user
+    $message = $modx->getChunk('successfulPaymentEmail', array('invId' => $inv_id));
+    $modx->getService('mail', 'mail.modPHPMailer');
+    $modx->mail->set(modMail::MAIL_BODY,$message);
+    $modx->mail->set(modMail::MAIL_FROM,$modx->getChunk('email'));
+    $modx->mail->set(modMail::MAIL_FROM_NAME,'DZ Putilovo');
+    $modx->mail->set(modMail::MAIL_SUBJECT,'Ваш заказ успешно оплачен!');
+    $modx->mail->address('to',$userEmail);
+    $modx->mail->setHTML(true);
+    if (!$modx->mail->send()) {
+        $modx->log(modX::LOG_LEVEL_ERROR,"Cannot send email to user $userEmail about invoice $inv_id: ".$modx->mail->mailer->ErrorInfo);
+    }
+    $modx->mail->reset();
+
     echo $certNo;
 ?>
