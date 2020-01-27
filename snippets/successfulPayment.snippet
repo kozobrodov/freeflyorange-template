@@ -1,0 +1,35 @@
+<?php
+    $settings = $modx->getCollection('payments');
+
+    // Get parameters needed for redirect
+    $test_mode = $modx->getOption('isTestMode', $settings);
+    $login = $modx->getOption('login', $settings);
+
+    $pass = '';
+    if ($test_mode) {
+        $modx->log(xPDO::LOG_LEVEL_INFO,"Test mode for payments is enabled");
+        $pass = $modx->getOption('testPass1', $settings);
+    } else {
+        $pass = $modx->getOption('pass1', $settings);
+    }
+
+    // HTTP parameters:
+    $out_summ = $_REQUEST["OutSum"];
+    $inv_id = $_REQUEST["InvId"];
+    $certNo = $_REQUEST["Shp_certNo"];
+    $userEmail = $_REQUEST["Shp_email"];
+    $crc = strtoupper($_REQUEST["SignatureValue"]);
+
+    $my_crc = strtoupper(md5("$out_summ:$inv_id:$pass:Shp_certNo=$certNo:Shp_email=$userEmail"));
+
+    if ($my_crc != $crc)
+    {
+        $modx->log(xPDO::LOG_LEVEL_ERROR,"Wrong signature on result page, orderId: $certNo");
+        // Redirect to main page
+        $modx->sendRedirect($modx->makeUrl(1));
+        exit();
+    }
+
+    // todo: Send mail
+    echo $certNo;
+?>

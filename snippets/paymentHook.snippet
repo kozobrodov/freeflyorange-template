@@ -1,7 +1,9 @@
 <?php
     $settings = $modx->getCollection('payments');
+
     // Get parameters needed for redirect
     $test_mode = $modx->getOption('isTestMode', $settings);
+    $test_mode_int = (int)$test_mode;
     $paymentPageUrl = $modx->getOption('baseUrl', $settings);
     $login = $modx->getOption('login', $settings);
 
@@ -19,13 +21,18 @@
         $inv_id .= mt_rand(0, 9);
     }
 
+    // Get user email
+    $user_email = 'Shp_email=' . $hook->getValue('email');
+    $certNo = 'Shp_certNo=' . $inv_id;
+
     // Create URL for redirect
     // build CRC value
-    $crc  = md5("$login:$paymentSum:$inv_id:$pass");
+    $crc  = md5("$login:$paymentSum:$inv_id:$pass:$certNo:$user_email");
 
     // build URL
-    $url = "$paymentPageUrl?MerchantLogin=$login&".
-    "OutSum=$paymentSum&InvId=$inv_id&Description=$paymentDescription&SignatureValue=$crc";
+    $url = "$paymentPageUrl?IsTest=$test_mode_int&MerchantLogin=$login&".
+    "OutSum=$paymentSum&InvId=$inv_id&Description=$paymentDescription&SignatureValue=$crc".
+    "&$certNo&$user_email";
 
     // And finally redirect:
     $modx->log(xPDO::LOG_LEVEL_INFO,"Redirecting user for payment: $url");
