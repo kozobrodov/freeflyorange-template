@@ -1,0 +1,66 @@
+<?php
+    $settings = $modx->getCollection('payments');
+
+    // Get parameters needed for redirect
+    $test_mode = $modx->getOption('isTestMode', $settings);
+
+    $pass = '';
+    if ($test_mode) {
+        $modx->log(xPDO::LOG_LEVEL_INFO,"Test mode for payments is enabled");
+        $pass = $modx->getOption('testPass2', $settings);
+    } else {
+        $pass = $modx->getOption('pass2', $settings);
+    }
+
+    // HTTP parameters:
+    $out_summ = $_REQUEST["OutSum"];
+    $inv_id = $_REQUEST["InvId"];
+    $certNo = $_REQUEST["Shp_certNo"];
+    $userEmail = $_REQUEST["Shp_email"];
+    $crc = strtoupper($_REQUEST["SignatureValue"]);
+
+    $my_crc = strtoupper(md5("$out_summ:$inv_id:$pass:Shp_certNo=$certNo:Shp_email=$userEmail"));
+
+    if ($my_crc != $crc)
+    {
+        $modx->log(xPDO::LOG_LEVEL_ERROR,"Wrong signature on result page, orderId: $certNo");
+        // Redirect to main page
+        echo "NOT_OK";
+        exit();
+    }
+
+    // Send mail to user
+    $message = $modx->getChunk('successfulPaymentEmail', array('invId' => $inv_id));
+    $modx->getService('mail', 'mail.modPHPMailer');
+    $modx->mail->set(modMail::MAIL_BODY,$message);
+    $modx->mail->set(modMail::MAIL_FROM,$modx->getChunk('email'));
+    $modx->mail->set(modMail::MAIL_FROM_NAME,'DZ Putilovo');
+    $modx->mail->set(modMail::MAIL_SUBJECT,'Ваш заказ успешно оплачен!');
+    $modx->mail->address('to',$userEmail);
+    $modx->mail->setHTML(true);
+    if (!$modx->mail->send()) {
+        $modx->log(modX::LOG_LEVEL_ERROR,"Cannot send email to user $userEmail about invoice $inv_id: ".$modx->mail->mailer->ErrorInfo);
+    }
+    $modx->mail->reset();
+
+    // Send mail to our payments email
+    $message = $modx->getChunk('successfulPaymentInternalEmail', array(
+            'invId' => $inv_id,
+            'sum' => $out_summ,
+            'userEmail' => $userEmail,
+            'currentDate' => date("Y-m-d h:i:sa")
+    ));
+    $modx->getService('mail', 'mail.modPHPMailer');
+    $modx->mail->set(modMail::MAIL_BODY,$message);
+    $modx->mail->set(modMail::MAIL_FROM,$modx->getChunk('email'));
+    $modx->mail->set(modMail::MAIL_FROM_NAME,'DZ Putilovo');
+    $modx->mail->set(modMail::MAIL_SUBJECT,'Ваш заказ успешно оплачен!');
+    $modx->mail->address('to',$modx->getChunk('paymentsEmail'));
+    $modx->mail->setHTML(true);
+    if (!$modx->mail->send()) {
+    $modx->log(modX::LOG_LEVEL_ERROR,"Cannot send email to user $userEmail about invoice $inv_id: ".$modx->mail->mailer->ErrorInfo);
+}
+    $modx->mail->reset();
+
+    echo "OK$inv_id";
+?>
