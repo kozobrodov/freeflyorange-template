@@ -35,7 +35,7 @@
                             <span class="has-error">
                             <span class="help-block">[[!+fi.error.email]]</span>
                         </span>
-                            <input type="email" name="email" value="[[!+fi.email]]" class="form-control input-lg" maxlength="80" />
+                            <input type="email" name="email" placeholder="email@example.com" value="[[!+fi.email]]" class="form-control input-lg" maxlength="80" />
                         </label>
                     </div>
                     <div class="form-group text-right">
