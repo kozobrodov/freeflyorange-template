@@ -1,38 +1,26 @@
 <nav class="topnav" id="myTopnav">
     <ul>
-        <li><a href="/" class="active">Главная</a></li>
         <li class="dropdown">
-            <button class="dropbtn">Начинающим
+            <button class="dropbtn">Прыжки с парашютом
                 <i class="fa fa-caret-down"></i>
             </button>
             <ul class="dropdown-content">
-                <li><a href="/tandem.html">Прыжок в тандеме</a></li>
-                <li><a href="/certs.html">Подарочные сертификаты</a></li>
-                <li><a href="/aff.html">Обучение</a></li>
+                <li><a href="/tandem.html">Прыжки в тандеме</a></li>
+                <li><a href="/aff.html">Программа обучения AFF</a></li>
+                <li><a href="/sport-info.html">Спортсменам</a></li>
+                <li><a href="/price.html">Цены</a></li>
             </ul>
         </li>
-        <li class="dropdown">
-            <button class="dropbtn">Спорстменам
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <ul class="dropdown-content">
-                <li><a href="/sport-info.html">Общая информация</a></li>
-                <li><a href="/webcam.html">Веб-камера</a></li>
-                <li><a href="/calendar.html">Календарь</a></li>
-                <li><a href="/hotel.html">Проживание</a></li>
-            </ul>
-        </li>
+        <li><a href="/certs.html">Подарочный сертификат</a></li>
         <li class="dropdown">
             <button class="dropbtn">О нас
                 <i class="fa fa-caret-down"></i>
             </button>
             <ul class="dropdown-content">
-                <li><a href="/aero-putilovo.html">Аэродром Путилово</a></li>
                 <li><a href="/planes.html">Авиапарк</a></li>
-                <li><a href="/bosses.html">Руководство</a></li>
                 <li><a href="/instructors.html">Инструктора</a></li>
             </ul>
         </li>
-        <li><a href="/">Контакты</a></li>
+        <li><a href="/contacts.html">Контакты</a></li>
     </ul>
 </nav><!--/.nav-collapse -->
