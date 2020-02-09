@@ -29,14 +29,36 @@
         exit();
     }
 
+    // Generate certificate
+    $templatesDir = $modx->getOption('certTemplatesDir', $settings);
+    $certsDir = $modx->getOption('certsDir', $settings);
+
+    $Imagick = new Imagick();
+    $Imagick->readImage($templatesDir . '/cert1.jpg');
+
+    // Add certificate number
+    $ImagickDraw = new ImagickDraw();
+    $ImagickDraw->setFont('times');
+    $ImagickDraw->setFontSize(140);
+    $ImagickDraw->setFillColor(new ImagickPixel('#000000'));
+    $ImagickDraw->setStrokeAntialias(true);
+    $ImagickDraw->setTextAntialias(true);
+    $Imagick->annotateImage($ImagickDraw, 250, 1235, 0, $certNo);
+
+    // Save file with first page
+    $certFirstPage = $certsDir . '/' . $certNo . ".jpg";
+    $Imagick->writeImage($certFirstPage);
+
     // Send mail to user
-    $message = $modx->getChunk('successfulPaymentEmail', array('invId' => $inv_id));
+    $message = $modx->getChunk('successfulPaymentEmail', array('invId' => $certNo));
     $modx->getService('mail', 'mail.modPHPMailer');
     $modx->mail->set(modMail::MAIL_BODY,$message);
     $modx->mail->set(modMail::MAIL_FROM,$modx->getChunk('email'));
     $modx->mail->set(modMail::MAIL_FROM_NAME,'DZ Putilovo');
     $modx->mail->set(modMail::MAIL_SUBJECT,'Ваш заказ успешно оплачен!');
     $modx->mail->address('to',$userEmail);
+    $modx->mail->mailer->AddAttachment($certFirstPage);
+    $modx->mail->mailer->AddAttachment($templatesDir . '/cert2.jpg', $certNo . '-back.jpg');
     $modx->mail->setHTML(true);
     if (!$modx->mail->send()) {
         $modx->log(modX::LOG_LEVEL_ERROR,"Cannot send email to user $userEmail about invoice $inv_id: ".$modx->mail->mailer->ErrorInfo);
@@ -45,7 +67,7 @@
 
     // Send mail to our payments email
     $message = $modx->getChunk('successfulPaymentInternalEmail', array(
-            'invId' => $inv_id,
+            'invId' => $certNo,
             'sum' => $out_summ,
             'userEmail' => $userEmail,
             'currentDate' => date("Y-m-d h:i:sa")
@@ -62,5 +84,6 @@
 }
     $modx->mail->reset();
 
+    $modx->log(modX::LOG_LEVEL_INFO,"Order $inv_id is successfully paid, mails are sent");
     echo "OK$inv_id";
 ?>
